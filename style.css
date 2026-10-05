@@ -1,0 +1,20 @@
+body { margin: 0; font-family: Arial, sans-serif; color: #19334a; background: #eef3f8; line-height: 1.6; }
+main { max-width: 900px; margin: 32px auto; padding: 32px; background: white; border-radius: 16px; }
+h1 { font-size: 32px; line-height: 1.3; margin: 8px 0 12px; }
+h2 { font-size: 21px; line-height: 1.4; margin: 0 0 16px; }
+p { margin: 0 0 18px; }
+.eyebrow { color: #2463c5; font-size: 12px; letter-spacing: 1.5px; font-weight: bold; }
+section { margin-top: 28px; }
+.demo-viewport { max-width: 100%; overflow-x: auto; padding-bottom: 12px; }
+.container { display: flex; width: 800px; gap: 10px; }
+.item { box-sizing: border-box; flex-basis: 100px; flex-grow: 0; padding: 30px 12px; background-color: lightblue; border: 1px solid #91c3d4; text-align: center; border-radius: 8px; font-weight: bold; }
+.item span { display: block; margin-top: 8px; font-size: 13px; font-weight: normal; }
+.item:nth-child(2) { flex-grow: 1; background-color: #b6edcc; border-color: #7ebd98; }
+.explanation { padding: 24px; background: #edf4ff; border-left: 4px solid #2463c5; }
+ul { padding-left: 22px; margin: 0; }
+li { margin-bottom: 8px; }
+li:last-child { margin-bottom: 0; }
+pre { margin: 0; padding: 20px; overflow-x: auto; background: #19334a; color: #e3f4ff; border-radius: 8px; line-height: 1.6; }
+.note { margin-top: 24px; color: #576e84; }
+footer { padding-top: 16px; border-top: 1px solid #dce5ef; font-size: 14px; color: #576e84; }
+@media (max-width: 768px) { main { margin: 16px; padding: 20px; } h1 { font-size: 26px; } .explanation { padding: 18px; } }

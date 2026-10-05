@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS flex-grow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <p class="eyebrow">THỰC HÀNH CSS FLEXBOX</p>
+            <h1>Phân phối không gian với flex-grow</h1>
+            <p>Trong 5 Flex Item, ô thứ hai nhận toàn bộ phần không gian còn trống.</p>
+        </header>
+        <section aria-labelledby="demo-title">
+            <h2 id="demo-title">Ví dụ: flex-grow ở Item 2</h2>
+            <div class="demo-viewport" tabindex="0" aria-label="Khung ví dụ, có thể cuộn ngang trên điện thoại">
+                <div class="container">
+                    <div class="item">Item 1<span>grow: 0</span></div>
+                    <div class="item item-grow">Item 2<span>grow: 1</span></div>
+                    <div class="item">Item 3<span>grow: 0</span></div>
+                    <div class="item">Item 4<span>grow: 0</span></div>
+                    <div class="item">Item 5<span>grow: 0</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="explanation">
+            <h2>Kết quả quan sát</h2>
+            <ul>
+                <li>Container rộng 800px và có gap 10px giữa các ô.</li>
+                <li>Mỗi Item có kích thước cơ sở 100px; mặc định flex-grow bằng 0.</li>
+                <li>Phần không gian còn trống: 800 − (5 × 100) − (4 × 10) = 260px.</li>
+                <li>Item 2 dùng flex-grow: 1 nên rộng 100 + 260 = 360px; bốn Item còn lại rộng 100px.</li>
+                <li>flex-grow phân phối không gian còn trống, không trực tiếp quy định tỉ lệ chiều rộng cuối cùng.</li>
+            </ul>
+        </section>
+        <section class="code-example">
+            <h2>CSS chính</h2>
+            <pre><code>.container {
+    display: flex;
+    width: 800px;
+    gap: 10px;
+}
+
+.item {
+    box-sizing: border-box;
+    flex-basis: 100px;
+    flex-grow: 0;
+}
+
+.item:nth-child(2) {
+    flex-grow: 1;
+}</code></pre>
+        </section>
+        <p class="note">Trên điện thoại, vuốt ngang trong khung ví dụ để xem đủ 5 ô. Kích thước khung được giữ nguyên để dễ so sánh.</p>
+        <footer>Bài thực hành HTML &amp; CSS · flex-grow</footer>
+    </main>
+</body>
+</html>
